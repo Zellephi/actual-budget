@@ -1687,6 +1687,7 @@ class ActuaRepository(context: Context) {
             payees = db.fetchPayees(),
             firstDayOfWeek = db.firstDayOfWeekPreference(),
             monthStart = reportMonthStart,
+            tags = db.fetchTags(),
         )
     }
 
@@ -1730,6 +1731,7 @@ class ActuaRepository(context: Context) {
                 reportBudgetMonths.getOrPut(month) { runCatching { db.fetchBudgetMonth(month.toString()) }.getOrNull() }
             },
             monthStart = reportMonthStart,
+            tags = db.fetchTags(),
             widgetFilter = widgetFilter,
             range = range,
         )
@@ -1795,6 +1797,7 @@ class ActuaRepository(context: Context) {
             payees = payees,
             firstDayOfWeek = firstDayOfWeek,
             monthStart = reportMonthStart,
+            tags = db.fetchTags(),
         )
         val pages = dashboards + com.azimulkabir.actua.model.ReportDashboardPage("saved-reports", "Overview", savedWidgets)
         return ReportSnapshot(
@@ -1874,6 +1877,7 @@ class ActuaRepository(context: Context) {
             payees = payees,
             firstDayOfWeek = firstDayOfWeek,
             monthStart = reportMonthStart,
+            tags = db.fetchTags(),
         )
         return runCatching {
             com.azimulkabir.actua.data.reports.SavedReportEngine.compute(
