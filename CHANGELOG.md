@@ -14,6 +14,7 @@ All notable user-facing changes to Actua are recorded here. This project uses [S
 - Added support for the zero-based y-axis option on Balance Forecast widgets set up in Actual ([#1431](https://github.com/azimul-kabir/actua/pull/1431))
 - Added recovering a budget whose encryption password was changed in Actual, by entering the new password and re-downloading it ([#1401](https://github.com/azimul-kabir/actua/pull/1401))
 - Added Back up and re-download in Connection settings to recover a budget whose server sync was reset ([#1400](https://github.com/azimul-kabir/actua/pull/1400))
+- Added hiding reconciled transactions in the All Accounts list, kept in sync with Actual ([#1432](https://github.com/azimul-kabir/actua/pull/1432))
 - Added adding categories to the income group in Manage Categories ([#1398](https://github.com/azimul-kabir/actua/pull/1398))
 
 ### Changed
